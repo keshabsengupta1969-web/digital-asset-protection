@@ -26,8 +26,9 @@ function Home() {
   const unauthorized = assets.filter(a => a.status === "Unauthorized").length;
 
   // 🔍 Search Filter
-  const filteredAssets = assets.filter(a =>
-    a.title.toLowerCase().includes(search.toLowerCase())
+  const filteredAssets = assets.filter((asset) =>
+    asset.title &&
+    asset.title.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -82,7 +83,7 @@ function Home() {
 
         {/* 📦 Asset Cards */}
         <div className="grid gap-4">
-          {assets.map((asset) => (
+          {filteredAssets.map((asset) => (
             <div
               key={asset.id}
               className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
