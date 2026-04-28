@@ -7,12 +7,12 @@ function Home() {
   const [search, setSearch] = useState("");
 
   const fetchAssets = async () => {
-    const res = await axios.get("http://localhost:5000/assets");
+    const res = await axios.get("https://digital-asset-protection-xzsm.onrender.com/assets");
     setAssets(res.data);
   };
 
   const deleteAsset = async (id) => {
-    await axios.delete(`http://localhost:5000/assets/${id}`);
+    await axios.delete(`https://digital-asset-protection-xzsm.onrender.com/assets/${id}`);
     fetchAssets();
   };
 
@@ -99,8 +99,8 @@ function Home() {
                 {/* Status Badge */}
                 <span
                   className={`px-3 py-1 rounded-full text-sm font-medium ${asset.status === "Authorized"
-                      ? "bg-green-100 text-green-600"
-                      : "bg-red-100 text-red-600"
+                    ? "bg-green-100 text-green-600"
+                    : "bg-red-100 text-red-600"
                     }`}
                 >
                   {asset.status}

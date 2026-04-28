@@ -13,7 +13,7 @@ function Edit() {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/assets/${id}`)
+    axios.get(`https://digital-asset-protection-xzsm.onrender.com/assets/${id}`)
       .then(res => setForm(res.data));
   }, []);
 
@@ -26,7 +26,7 @@ function Edit() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.put(`http://localhost:5000/assets/${id}`, form);
+    await axios.put(`https://digital-asset-protection-xzsm.onrender.com/assets/${id}`, form);
     navigate("/");
   };
 

@@ -26,7 +26,7 @@ function Create() {
       return;
     }
 
-    await axios.post("http://localhost:5000/assets", form);
+    await axios.post("https://digital-asset-protection-xzsm.onrender.com/assets", form);
     navigate("/");
   };
 
