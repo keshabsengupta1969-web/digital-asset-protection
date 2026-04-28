@@ -82,7 +82,7 @@ function Home() {
 
         {/* 📦 Asset Cards */}
         <div className="grid gap-4">
-          {filteredAssets.map((asset) => (
+          {assets.map((asset) => (
             <div
               key={asset.id}
               className="bg-white p-5 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
