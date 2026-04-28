@@ -35,9 +35,8 @@ app.get("/assets", (req, res) => {
 });
 
 // READ ONE
-app.get("/assets/:id", (req, res) => {
-  const asset = assets.find(a => a.id == req.params.id);
-  res.json(asset);
+app.get("/", (req, res) => {
+  res.send("🚀 Digital Asset Protection API is running");
 });
 
 // UPDATE
